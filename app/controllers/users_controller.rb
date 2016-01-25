@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
+			finished("signup_title", reset: false)
 			redirect_to root_url, notice: "Thank you for signing up"
 		else
 			render "new"
