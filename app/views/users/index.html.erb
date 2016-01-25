@@ -3,3 +3,9 @@
 <p>Crowdsource termsheet business-to-business. Seed money ramen incubator. Churn rate business model canvas marketing prototype interaction design seed money partner network business-to-consumer vesting period branding. Monetization android direct mailing. Crowdfunding disruptive gamification partnership funding customer accelerator responsive web design pitch innovator sales termsheet ramen bandwidth. MVP early adopters long tail. Channels first mover advantage business model canvas business plan backing alpha customer prototype seed round rockstar assets user experience angel investor. Sales startup analytics paradigm shift customer iteration low hanging fruit MVP termsheet. Business-to-consumer niche market paradigm shift. Burn rate virality freemium rockstar crowdfunding market holy grail lean startup android.</p>
 
 <p><%= link_to "Sign Up", new_user_path %></p>
+
+<% @users.each do |user| %>
+    <ul class="userlist">
+      <li><%= user.email %></li>
+    </ul>
+<% end %>
