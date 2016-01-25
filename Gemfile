@@ -29,4 +29,4 @@ group :development do
   gem 'spring'
 end
 
-gem 'split'
+gem 'split', require: 'split/dashboard'
