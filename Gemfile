@@ -29,5 +29,9 @@ group :development do
   gem 'spring'
 end
 
-gem 'split'
 gem 'bootstrap-sass'
+
+# Use Vanity for A/B, and Mongo for storage of test data
+gem 'vanity'
+gem 'bson_ext'
+gem 'mongo'
