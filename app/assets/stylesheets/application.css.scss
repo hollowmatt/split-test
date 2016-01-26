@@ -38,7 +38,7 @@ a {
   overflow: hidden;
 }
 
-#container {
+.container {
   width: 75%;
   margin: 0 auto;
   background-color: #FFF;
@@ -88,3 +88,38 @@ form label {
   font-size: 16px;
   margin-bottom: 2px;
 }
+
+/*Left Nav Styles*/
+#leftnav {
+  background-color: #fb3;
+  color: #fff;
+}
+
+#leftnav ul {
+  list-style-type: none;
+}
+
+#leftnav a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+/*End: Left Nav*/
+
+/*Top Nav Styles*/
+#topnav {
+  background-color: #fb3;
+  color: #fff;
+}
+
+#topnav ul {
+  list-style-type: none;
+}
+#topnav li {
+  display: inline;
+}
+
+#topnav a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+/*End: Top Nav*/
