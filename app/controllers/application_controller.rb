@@ -5,4 +5,9 @@ class ApplicationController < ActionController::Base
 
   # turn on vanity
   use_vanity :current_user
+
+  private
+  	def current_user
+  		return nil
+  	end
 end
