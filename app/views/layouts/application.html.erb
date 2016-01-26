@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SplitTest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div class="container">
+	<head>
+	  <title>SplitTest</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 		<% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
-		<div class="row">
-			<div class="col-md-9">
-				<%= yield %>
-			</div>
-			<div class="col-md-3">
-				<%= render 'common/leftnav' %>
-			</div>
-		</div>	
-  </div>
-</body>
+		<div class="container">
+			<%=ab_test "navigation", "Top Nav", "Left Nav" do |nav| %>
+				<% if nav =="Left Nav" %>
+					<div class="row">
+						<div class="col-md-3">
+							<%= render 'common/leftnav' %>
+						</div>
+						<div class="col-md-9">
+							<%= yield %>
+						</div>
+					</div>
+				<% elsif nav == "Top Nav" %>
+					<div class="row">
+						<div class="col-md-12">
+							<%= render 'common/topnav' %>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<%= yield %>
+						</div>
+					</div>
+				<% end %>
+			<% end %>	
+	  </div>
+	</body>
 </html>

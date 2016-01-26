@@ -10,9 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "users";
 
 body {
   background-color: #4B7399;
@@ -84,3 +85,38 @@ form label {
   font-size: 16px;
   margin-bottom: 2px;
 }
+
+/*Left Nav Styles*/
+#leftnav {
+	background-color: #fb3;
+	color: #fff;
+}
+
+#leftnav ul {
+	list-style-type: none;
+}
+
+#leftnav a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+/*End: Left Nav*/
+
+/*Top Nav Styles*/
+#topnav {
+	background-color: #fb3;
+	color: #fff;
+}
+
+#topnav ul {
+	list-style-type: none;
+}
+#topnav li {
+	display: inline;
+}
+
+#topnav a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+/*End: Top Nav*/
