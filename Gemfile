@@ -30,3 +30,4 @@ group :development do
 end
 
 gem 'split'
+gem 'bootstrap-sass'
