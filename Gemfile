@@ -30,3 +30,4 @@ group :development do
 end
 
 gem 'split', require: 'split/dashboard'
+gem 'twitter-bootstrap-rails'
